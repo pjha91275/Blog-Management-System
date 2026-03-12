@@ -86,7 +86,8 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
   try {
     const locals = {
       title: 'Dashboard',
-      description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+      description: 'Simple Blog created with NodeJs, Express & MongoDb.',
+      userId: req.userId
     }
 
     const data = await Post.find();
